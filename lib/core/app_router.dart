@@ -9,7 +9,7 @@ import 'package:soma_de_dois_numeros/presentation/pages/sum_result_page.dart';
 const animationDuration = Duration(seconds: 1);
 
 class AppRouter {
-  static Route<dynamic> generateRoute (RouteSettings settings) {
+  static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case MaterialHomePage.routeName:
         return PageTransition(
@@ -33,13 +33,22 @@ class AppRouter {
         );
 
       case SumResultPage.routeName:
-        List<String> arguments = settings.arguments;
+        List <String> arguments = settings.arguments;
         return PageTransition(
           duration: animationDuration,
           type: PageTransitionType.rightToLeft,
           child: SumResultPage(
             firstValue: arguments[0],
             secondValue: arguments[1],
+          ),
+        );
+      default:
+        return MaterialPageRoute(
+          builder: (_) => Scaffold(
+            body: Center(
+                child: Text('Rota não definida '
+                    'para ${settings.name}'),
+            ),
           ),
         );
     }
