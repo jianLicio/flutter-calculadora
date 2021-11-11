@@ -4,9 +4,12 @@ import 'package:page_transition/page_transition.dart';
 import 'package:soma_de_dois_numeros/common/common_functions.dart';
 import 'package:soma_de_dois_numeros/presentation/pages/second_value_page.dart';
 
+// ignore: must_be_immutable
 class FirstValuePage extends StatelessWidget {
   String _firstValue = '';
   static const routeName = '/first';
+
+  FirstValuePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

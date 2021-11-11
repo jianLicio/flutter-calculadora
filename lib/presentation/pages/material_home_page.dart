@@ -6,6 +6,8 @@ import 'package:soma_de_dois_numeros/presentation/pages/first_value_page.dart';
 class MaterialHomePage extends StatelessWidget {
   static const routeName = '/';
 
+  const MaterialHomePage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +17,7 @@ class MaterialHomePage extends StatelessWidget {
             Align(
               alignment: Alignment.topCenter,
               child: Padding(
-                padding: EdgeInsets.only(top: 16.0),
+                padding: const EdgeInsets.only(top: 16.0),
                 child: Text(
                   'App de soma de dois valores',
                   textAlign: TextAlign.center,
